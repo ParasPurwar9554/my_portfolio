@@ -1,0 +1,401 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paras Purwar | Full Stack Developer (Python · PHP · Angular)</title>
+  <meta name="description" content="Paras Purwar - Full Stack Software Developer with 8.5+ years of experience in Python, PHP, Angular, REST APIs and AWS.">
+
+  <!-- Bootstrap 5 + Icons + Font -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">
+        <i class="bi bi-cpu text-accent"></i> Paras<span class="text-accent">Purwar</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="themeBtn" class="btn btn-icon" title="Light / Dark"><i class="bi bi-sun"></i></button>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-accent btn-sm px-3" href="{% static 'assets/resume.pdf' %}" download><i class="bi bi-download me-1"></i>Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="pill mb-3"><span class="dot-live"></span> Open to work · Full Stack roles</span>
+          <h1 class="display-4 fw-bold mb-3">
+            Hi, I'm Paras Purwar.<br>
+            <span class="gradient-text">Full Stack Developer</span>
+          </h1>
+          <p class="lead text-soft mb-4">
+            I build fast, reliable web applications and REST APIs with
+            <strong>Python, PHP &amp; Angular</strong>, from the backend to the user screen.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a href="#projects" class="btn btn-accent btn-lg">View My Work</a>
+            <a href="#contact" class="btn btn-line btn-lg">Contact Me</a>
+          </div>
+          <div class="d-flex gap-3 social">
+            <a href="https://www.linkedin.com/in/paras-purwar-aa71a4167" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <!-- TODO: put your real GitHub link here -->
+            <a href="https://github.com/ParasPurwar9554" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="mailto:paraspurwar5@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Simple "developer profile" card -->
+        <div class="col-lg-5">
+          <div class="box agent-card">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span class="agent-icon"><i class="bi bi-person-workspace"></i></span>
+              <div>
+                <div class="fw-semibold">Developer Profile</div>
+                <small class="text-soft">status: available</small>
+              </div>
+            </div>
+            <div class="mono small">
+              <div><span class="text-soft">role:</span> Full Stack Software Developer</div>
+              <div><span class="text-soft">backend:</span> Python · Flask · Django · PHP · Laravel</div>
+              <div><span class="text-soft">frontend:</span> Angular · TypeScript · jQuery</div>
+              <div><span class="text-soft">experience:</span> 8.5+ years</div>
+              <div><span class="text-soft">location:</span> Noida, India</div>
+              <div class="text-success mt-2"><i class="bi bi-check2-circle"></i> ready_to_join = true</div>
+            </div>
+          </div>
+          <div class="row g-3 mt-1 text-center">
+            <div class="col-4"><div class="box py-3"><div class="h3 fw-bold mb-0">8.5+</div><small class="text-soft">Years</small></div></div>
+            <div class="col-4"><div class="box py-3"><div class="h3 fw-bold mb-0">3</div><small class="text-soft">Companies</small></div></div>
+            <div class="col-4"><div class="box py-3"><div class="h3 fw-bold mb-0">6+</div><small class="text-soft">Major Projects</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-4 text-center">
+          <img src="{% static 'assets/profile.jpg' %}" alt="Paras Purwar" class="profile-img"
+               onerror="this.onerror=null;this.src='https://placehold.co/300x300/2a3150/9aa4ff?text=Photo'">
+        </div>
+        <div class="col-lg-8">
+          <p class="label">About me</p>
+          <h2 class="fw-bold mb-3">I turn business needs into working software</h2>
+          <p class="text-soft">
+            I'm a Full Stack Software Developer from Noida, India, with <strong>8.5+ years of experience</strong>
+            building web applications for real businesses. I work mostly with
+            <strong>Python (Flask, Django, FastAPI)</strong> and <strong>PHP (Laravel, Zend)</strong> on the backend,
+            and <strong>Angular</strong> on the frontend.
+          </p>
+          <p class="text-soft">
+            I enjoy designing clean REST APIs, connecting systems together, and fixing tough production issues.
+            I've worked on hotel management software, project tracking tools, secure file sharing systems
+            and client portals.
+          </p>
+          <p class="text-soft">
+            Right now, I'm also exploring <strong>AI tools like the OpenAI API and LangChain</strong>
+            to build smarter applications.
+          </p>
+          <div class="row g-2 mt-2 small">
+            <div class="col-sm-6"><i class="bi bi-geo-alt text-accent me-2"></i>Noida, India · Open to relocate</div>
+            <div class="col-sm-6"><i class="bi bi-mortarboard text-accent me-2"></i>MCA – Master of Computer Applications</div>
+            <div class="col-sm-6"><i class="bi bi-envelope text-accent me-2"></i>paras.purwar5@gmail.com</div>
+            <div class="col-sm-6"><i class="bi bi-telephone text-accent me-2"></i>+91 9554000522</div>
+            <!-- <div class="col-sm-6"><i class="bi bi-clock text-accent me-2"></i>Notice: Immediate / 30 days</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="label">Skills</p>
+        <h2 class="fw-bold">What I work with</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="box h-100">
+            <i class="bi bi-server icon"></i>
+            <h5 class="mt-3">Backend</h5>
+            <div class="chips"><span>Python</span><span>Django</span><span>Flask</span><span>FastAPI</span><span>PHP</span><span>Laravel</span><span>Zend</span><span>REST APIs</span></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box h-100">
+            <i class="bi bi-window icon"></i>
+            <h5 class="mt-3">Frontend</h5>
+            <div class="chips"><span>Angular</span><span>JavaScript</span><span>TypeScript</span><span>jQuery</span><span>Bootstrap</span><span>HTML</span><span>CSS</span></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box h-100">
+            <i class="bi bi-database icon"></i>
+            <h5 class="mt-3">Databases</h5>
+            <div class="chips"><span>SQL</span><span>MySQL</span><span>MongoDB</span><span>SQLite</span><span>Redis</span></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box h-100">
+            <i class="bi bi-cloud icon"></i>
+            <h5 class="mt-3">Cloud, Tools &amp; AI</h5>
+            <div class="chips"><span>AWS S3</span><span>AWS SQS</span><span>Docker</span><span>Git</span><span>Postman</span><span>OpenAI API</span><span>LangChain</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE (JOB JOURNEY) ========== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="label">Experience</p>
+        <h2 class="fw-bold">My job journey</h2>
+      </div>
+
+      <div class="timeline mx-auto">
+        <div class="t-item">
+          <div class="box">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <h5 class="mb-0">Software Engineer</h5>
+              <span class="date">Dec 2022 – Dec 2025</span>
+            </div>
+            <p class="text-soft mb-2">Hotelogix Pvt. Ltd. · Hotel Management Platform</p>
+            <ul class="text-soft mb-0">
+              <li>Built and maintained REST APIs for Reservations, Point of Sale and Shoomos integration.</li>
+              <li>Worked on Front Desk, Admin, HMS Admin, POS, Reports, Flash Messages and Data Export modules.</li>
+              <li>Added AWS SQS for background (asynchronous) processing.</li>
+              <li>Built hotel copy and configuration management features.</li>
+              <li>Fixed critical production issues and improved system stability.</li>
+            </ul>
+            <div class="chips mt-3"><span>Python</span><span>Flask</span><span>Angular</span><span>PHP (Zend)</span><span>MySQL</span><span>MongoDB</span><span>AWS</span></div>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="box">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <h5 class="mb-0">Senior Associate Software Engineer</h5>
+              <span class="date">Jul 2019 – Nov 2022</span>
+            </div>
+            <p class="text-soft mb-2">Effectual Knowledge Services Pvt. Ltd.</p>
+            <ul class="text-soft mb-0">
+              <li>Built a project tracking system that gives business insights.</li>
+              <li>Added multi-currency invoice generation for HR and finance teams.</li>
+              <li>Built a secure file sharing system on AWS S3 and a client portal for Faurecia.</li>
+            </ul>
+            <div class="chips mt-3"><span>Laravel</span><span>jQuery</span><span>Bootstrap</span><span>MySQL</span><span>AWS S3</span></div>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="box">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <h5 class="mb-0">Senior Associate Software Engineer</h5>
+              <span class="date">May 2017 – Jul 2019</span>
+            </div>
+            <p class="text-soft mb-2">Appy Pie LLP</p>
+            <ul class="text-soft mb-0">
+              <li>Built ticketing, leave tracking, room booking and policy management modules (Ons Interactive).</li>
+              <li>Added payment logs, email validation, custom domains and multi-language support (Snappy).</li>
+            </ul>
+            <div class="chips mt-3"><span>Zend</span><span>Angular</span><span>MySQL</span><span>MongoDB</span></div>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="box">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <h5 class="mb-0">MCA – Master of Computer Applications</h5>
+              <span class="date">2013 – 2016</span>
+            </div>
+            <p class="text-soft mb-1">Lucknow</p>
+            <p class="text-soft small mb-0">B.Sc., Orai (2010 – 2013) · Certifications: Python (Tutedude), Angular (Udemy)</p>
+          </div>
+        </div>
+
+        <div class="t-item next">
+          <div class="box">
+            <h5 class="mb-1"><i class="bi bi-rocket-takeoff text-accent me-2"></i>Next: your team?</h5>
+            <p class="text-soft mb-0">Ready to build stable, scalable products with a great team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="label">Projects</p>
+        <h2 class="fw-bold">Things I've built</h2>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box project h-100">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <i class="bi bi-building icon"></i>
+              <span class="tag-web">Full Stack</span>
+            </div>
+            <h5>Hotel Management Platform</h5>
+            <p class="text-soft">A cloud platform for hotels to manage bookings, billing, housekeeping, POS and guest services.</p>
+            <div class="chips mb-0"><span>Python</span><span>Flask</span><span>Angular</span><span>Zend</span><span>AWS SQS</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box project h-100">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <i class="bi bi-kanban icon"></i>
+              <span class="tag-web">Full Stack</span>
+            </div>
+            <h5>Project Management System</h5>
+            <p class="text-soft">Tracks projects, gives business insights and creates multi-currency invoices for finance teams.</p>
+            <div class="chips mb-0"><span>Laravel</span><span>jQuery</span><span>Bootstrap</span><span>MySQL</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box project h-100">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <i class="bi bi-cloud-arrow-up icon"></i>
+              <span class="tag-web">Cloud</span>
+            </div>
+            <h5>Secure File Transfer Tool</h5>
+            <p class="text-soft">Lets employees safely upload and share files with clients using AWS S3.</p>
+            <div class="chips mb-0"><span>Laravel</span><span>MySQL</span><span>AWS S3</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box project h-100">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <i class="bi bi-people icon"></i>
+              <span class="tag-web">Client Portal</span>
+            </div>
+            <h5>Faurecia Client Portal</h5>
+            <p class="text-soft">Clients create and manage projects, upload files securely and view data in interactive tables.</p>
+            <div class="chips mb-0"><span>Laravel</span><span>MySQL</span><span>AWS S3</span><span>DataTables</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box project h-100">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <i class="bi bi-ticket-detailed icon"></i>
+              <span class="tag-web">Full Stack</span>
+            </div>
+            <h5>Ons Interactive – Office Suite</h5>
+            <p class="text-soft">Ticketing, leave tracking, conference room booking and company policy modules.</p>
+            <div class="chips mb-0"><span>Zend</span><span>Angular</span><span>MySQL</span><span>MongoDB</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="box project h-100">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <i class="bi bi-globe2 icon"></i>
+              <span class="tag-web">Full Stack</span>
+            </div>
+            <h5>Snappy</h5>
+            <p class="text-soft">Payment logs, email validation, custom domains and multi-language support.</p>
+            <div class="chips mb-0"><span>Zend</span><span>Angular</span><span>MySQL</span><span>MongoDB</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <p class="label">Contact</p>
+          <h2 class="fw-bold mb-3">Let's work together</h2>
+          <p class="text-soft mb-4">Have a project in mind or a role to fill? I'd love to hear from you. I usually reply within a day.</p>
+          <div class="contact-row"><i class="bi bi-envelope"></i> <a href="mailto:paras.purwar5@gmail.com">paras.purwar5@gmail.com</a></div>
+          <div class="contact-row"><i class="bi bi-telephone"></i> <a href="tel:+919554000522">+91 9554000522</a></div>
+          <div class="contact-row"><i class="bi bi-geo-alt"></i> Noida, India</div>
+          <div class="contact-row"><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/paras-purwar-aa71a4167" target="_blank" rel="noopener">linkedin.com/in/paras-purwar-aa71a4167</a></div>
+          <!-- TODO: put your real GitHub username here -->
+          <div class="contact-row"><i class="bi bi-github"></i> <a href="https://github.com/yourname" target="_blank" rel="noopener">github.com/yourname</a></div>
+        </div>
+        <div class="col-lg-7">
+          <form id="contactForm" class="box needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Company / Subject</label>
+                <input type="text" name="subject" class="form-control">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea name="message" rows="4" class="form-control" required></textarea>
+                <div class="invalid-feedback">Please write a message.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-accent w-100"><i class="bi bi-send me-2"></i>Send Message</button>
+              </div>
+              <div class="col-12"><div id="formMsg" class="small"></div></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 small">
+      <span>© <span id="year"></span> Paras Purwar</span>
+      <span class="text-soft">Built with Django &amp; Bootstrap 5</span>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
